@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Principal {
@@ -29,8 +30,12 @@ public class Principal {
                 salir = 0;
             }
         }
-        System.out.println("**********************************");
+        System.out.println("**********************************\n");
         System.out.println("COMPRAS REALIADAS");
+
+        // ordeno la lista de compras: agregar Comparable a Compras y su método
+        Collections.sort(tarjeta.getListaDeCompras());
+
         for(Compra compra : tarjeta.getListaDeCompras()){
             System.out.println(compra.getDescripcion() + " - " + compra.getValor());
         }
